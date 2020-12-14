@@ -17,6 +17,10 @@ defmodule Quiz.Endpoint do
         send_resp(conn, 200, encoded)
     end
 
+    put "/api/quiz/:quiz_id/:question" do
+        send_resp(conn, 200, "Answered")
+    end
+
     match _ do
         send_resp(conn, 404, "Nope")
     end
